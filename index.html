@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+    <title>Recipe Tracker</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="#">Home</a>
+            <a href="#">All Recipes</a>
+            <a href="#">My Recipes</a>
+            <a href="#">Contact</a>
+        </ul>
+    </nav>
+    <section class="form-input">
+        <form name="recipe-input">
+            <fieldset>
+              <legend>Recipe Input</legend>
+              <div class="recipe__name">
+                <label for="rname">Recipe Name</label>
+                <input name="rname" required />
+                <label for="ingredients">Ingredients</label>
+                <textarea name="ingredients" rows="4" cols="50"></textarea>
+                <input name="ingredients" required />
+              </div>
+              <div class="checkout__address">
+                <label for="street">Street</label>
+                <input name="street" required />
+                <label for="city">City</label>
+                <input name="city" required />
+                <label for="state">State</label>
+                <input name="state" required />
+                <label for="zip">Zip</label>
+                <input name="zip" id="zip" required />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Payment</legend>
+              <label for="cardNumber">Card number</label>
+              <input name="cardNumber" required />
+              <label for="expiration">Expiration</label>
+              <input name="expiration" required />
+              <label for="code">Security Code</label>
+              <input name="code" required />
+            </fieldset>
+            <button id="recipeSubmit" type="submit">Submit</button>
+          </form>
+    </section>
+</body>
+</html>
