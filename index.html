@@ -10,9 +10,10 @@
     <title>Recipe Tracker</title>
 </head>
 <body>
+  <div class="wrapper">
   <header>
     <div class="header-top">
-      <img class="logo" src="./img/recipe-book.png" alt="Icon of Recipe Book">
+      <img class="logo" src="./img/recipe-book-2.png" alt="Icon of Recipe Book">
       <!-- <a href="https://www.flaticon.com/free-icons/recipe-book" title="recipe book icons">Recipe book icons created by nawicon - Flaticon</a> -->
       <!-- <a href="https://www.flaticon.com/free-icons/cook-book" title="cook book icons">Cook book icons created by nawicon - Flaticon</a> -->
       <h1>Recipe Tracker</h1>
@@ -23,6 +24,7 @@
       <li><a class="menuItem" href="./allrecipes.html">All Recipes</a></li>
       <li><a class="menuItem" href="./myrecipes.html">My Recipes</a></li>
       <li><a class="menuItem" href="./contact.html">Contact</a></li>
+      <li><a class="menuItem" href="https://team-2-recipetracker.herokuapp.com/login">Login</a></li>
   </ul>
   <button class="hamburger">
     <!-- material icons https://material.io/resources/icons/ -->
@@ -30,46 +32,54 @@
     <i class="closeIcon material-icons">close</i>
   </button>
   <div>
-    <a class="login-link" href="https://team-2-recipetracker.herokuapp.com/login">Login</a>
+    <!-- <a class="login-link" href="https://team-2-recipetracker.herokuapp.com/login">Login</a> -->
   </div>
 </nav>
-
   </header>
     <section class="form-input">
+      <div class="form-outline">
         <form name="recipe-input">
             <fieldset>
               <legend>Recipe Input</legend>
               <div class="recipe__name">
                 <label for="rname">Recipe Name</label>
-                <input name="rname" required />
+                <input type="text" name="rname" placeholder="Name" required />
                 <label for="ingredients">Ingredients</label>
-                <input class="text-area" name="ingredients" required />
+                <input type="text" class="text-area" name="ingredients" placeholder="Ingredients" required />
                 <!-- <textarea name="ingredients" rows="4" cols="25"></textarea> -->
               </div>
               <label for="price">Price</label>
-              <input name="price" required />
+              <input type="text" name="price" placeholder="Price" required />
               <label for="time">Time to Cook</label>
-              <input name="time" required />
+              <input type="text" name="time" placeholder="Time" required />
               <label for="serving">Serving Size</label>
-              <input name="serving" required />
+              <input type="text" name="serving" placeholder="Serving Size" required />
               <label for="Instructions">Instructions</label>
-              <input class="text-area" name="Instructions" required />
+              <input type="text" class="text-area" name="Instructions" placeholder="Instructions" required />
               <label for="rating">Rating</label>
-              <input name="rating" required />
+              <select id="rating" name="rating" placeholder="Rating">
+                <option value="1star">&#9733</option>
+                <option value="2star">&#9733 &#9733</option>
+                <option value="3star">&#9733 &#9733 &#9733</option>
+                <option value="4star">&#9733 &#9733 &#9733 &#9733</option>
+                <option value="5star">&#9733 &#9733 &#9733 &#9733 &#9733</option>
+              </select>
               <label for="saved">Save</label>
-              <input name="saved" required />
+              <input type="text" name="saved" placeholder="Save" required />
               <label for="story">Recipe Backstory</label>
-              <input name="story" required />
+              <input type="text" name="story" placeholder="Backstory" required />
               <label for="book">Recipe Book</label>
-              <input name="book" required />
+              <input type="text" name="book" placeholder="Recipe Book" required />
               <label for="creator">Recipe Creator</label>
-              <input name="creator" required />
+              <input type="text" name="creator" placeholder="Creator" required />
             </fieldset>
             <button id="recipeSubmit" type="submit">Submit</button>
           </form>
+      </div>
     </section>
     <footer>
       <p class="footer-style">2022 &copy; Brigham Young University-Idaho</p>
     </footer>
+  </div>
 </body>
 </html>

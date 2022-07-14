@@ -1,120 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 :root {
     --main-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --background-color: #FF220C;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: var(--background-color);
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #EAE0D5;
+}
+
+/* header */
+.header {
+    padding-bottom: 50px;
 }
 
 .logo {
-    max-width: 30%;
-    height: auto;
-}
+    float: left;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+  }
 
-.header-top {
-    display: flex;
-}
-
-h1 {
-    font-family: var(--main-font);
-    font-size: 1.7em;
-    color: white;
-}
-
-.main-nav a {
-    display: block;
-    text-decoration: none;
-    list-style: none;
-    font-family: var(--main-font);
-    color: white;
-}
-
-.login-link {
-    color: white;
-    font-family: var(--main-font);
-    padding-bottom: 50px;
-    font-size: 1.2em;
+h2 {
+    background-color: #C6AC8F;
+    padding: 20px;
+    margin: 0;
 }
 
 /* FORM */
+
 .form-input {
+  padding-top: 2%;
+}
+
+legend {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2em;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.div-outline {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* button style*/
+#recipeSubmit {
     width: 100%;
-    font-family: var(--main-font);
     color: white;
-}
-
-.form-input label {
-    display: block;
-}
-
-.form-input input {
-    width: 100%;
-}
-
-/* hamburger menu */
-
-.menuItem {
-    display: block;
-    margin: 2rem 4rem;
-    font-size: 1.8rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menuItem:hover {
-    text-decoration: underline;
-  }
-  
-  .hamburger {
-    padding: 4px;
-    cursor: pointer;
-    background-color: var(--background-color);
-    font-family: var(--main-font);
-    color: white;
+    margin: 8px 0;
     border: none;
-    font-size: 1.2em;
-  }
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #C6AC8F;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 1em;
+}
 
-  .hamburger i {
-    font-family: var(--main-font);
-  }
-  
-  .closeIcon {
-    display: none;
-  }
-  
-  .menu {
-    position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background: var(--background-color);
+#recipeSubmit:hover{
+    background-color: #22333B;
     color: white;
-    list-style: none;
-    padding-top: 4rem;
-  }
-  
-  .showMenu {
-    transform: translateY(0);
-  }
+}
 
-  nav {
+/* nav */
+.main-nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0; 
+    overflow: hidden;
+    background-color: #22333B;
+}
+
+.main-nav li {
+    float: left;
+    padding: 18px;
+}
+
+.main-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-nav li a:hover {
+    background-color: #EAE0D5;
+    color: black;
+}
+
+.main-nav li a:active {
+    background-color: #144c75;
+}
+
+/* img */
+
+.img1 {
+    margin: 0;
+}
+
+/* paragraph */
+.container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+}
 
-/* footer */
 
-.footer-style {
-    font-family: var(--main-font);
-    color: white;
+/* Small */
+@media (max-width: 700px) {
+    
+    .menuItem {
+        display: block;
+        margin: 2rem 4rem;
+        font-size: 1.8rem;
+        color: white;
+        text-decoration: none;
+      }
+      
+      .menuItem:hover {
+        text-decoration: underline;
+      }
+      
+      .hamburger {
+        position: fixed;
+        z-index: 100;
+        top: 1rem;
+        right: 1rem;
+        padding: 4px;
+        border: black solid 1px;
+        background: white;
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+      }
+      
+      .closeIcon {
+        display: none;
+      }
+      
+      .menu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: black;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+      }
+      
+      .showMenu {
+        transform: translateY(0);
+      }
+
+}
+
+
+/* Medium */
+@media (min-width: 700px) and (max-width: 1080px) {
+    .hamburger {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1080px) {
+    .hamburger {
+        display: none;
+    }
 }
 
 
