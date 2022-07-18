@@ -1,10 +1,13 @@
 import ExternalServices from './ExternalServices.js';
+import RecipeDetails from './RecipeDetails.js';
 import { loadHeaderFooter } from './utils.js';
-const newService = new ExternalServices();
 
+const newService = new ExternalServices();
+const recipe = new RecipeDetails(recipeId, dataSource);
+
+recipe.renderRecipeDetails();
 newService.submit();
 loadHeaderFooter();
-
 
 document.querySelector('#recipeSubmit').addEventListener('click', (e) => {
     e.preventDefault();

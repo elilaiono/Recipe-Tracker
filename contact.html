@@ -12,7 +12,26 @@
 <body>
   <header id="main-header">
   </header>
-   
+  <section class="form-input">
+    <div class="form-outline">
+      <form name="recipe-input">
+          <fieldset>
+            <legend>Contact Us!</legend>
+            <div class="recipe__name">
+              <label for="rname">Your Name</label>
+              <input type="text" name="rname" placeholder="Name" required />
+              <label for="rname">Email</label>
+              <input type="text" name="email" placeholder="Email" required />
+              <label for="ingredients">Your Message</label>
+              <input type="text" class="text-area" name="ingredients" placeholder="Message" required />
+              
+            </div>
+           
+          </fieldset>
+          <button id="recipeSubmit" type="submit">Send Message</button>
+        </form>
+    </div>
+  </section>
     <footer id="main-footer">
     </footer>
 </body>

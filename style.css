@@ -127,6 +127,10 @@ input[type=text], select {
 
 /* Small */
 @media (max-width: 700px) {
+
+  /* h1, img {
+    padding-top: 50px;
+  } */
     
     .menuItem {
         display: block;
@@ -143,7 +147,7 @@ input[type=text], select {
       .hamburger {
         position: fixed;
         z-index: 100;
-        top: 1rem;
+        top: 5rem;
         right: 1rem;
         padding: 4px;
         border: black solid 1px;
@@ -151,6 +155,8 @@ input[type=text], select {
         cursor: pointer;
         height: 50px;
         width: 100px;
+        font-family: 'Source Sans Pro', sans-serif;
+        border-radius: 4px;
       }
       
       .closeIcon {
@@ -174,6 +180,10 @@ input[type=text], select {
       
       .showMenu {
         transform: translateY(0);
+      }
+
+      form {
+        padding-top: 50px;
       }
 
 }
